@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — ReporterHQ</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body data-page="login">
+  <header class="container site-header">
+    <div class="site-title">ReporterHQ</div>
+    <nav class="site-nav">
+      <a href="./index.html" class="btn">Home</a>
+      <a href="./gallery.html" class="btn">Gallery</a>
+      <a href="./login.html" class="btn btn--primary">Admin</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="form">
+      <h2>Admin sign in</h2>
+      <p class="small">Use the admin panel to manage news stories and the gallery.</p>
+
+      <form id="login-form">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" required autocomplete="username" />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required autocomplete="current-password" />
+        </div>
+
+        <button class="btn btn--primary" type="submit">Sign in</button>
+        <p class="hint">Hint: use <code>admin</code> / <code>password</code> for this demo.</p>
+      </form>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js"></script>
+</body>
+</html>

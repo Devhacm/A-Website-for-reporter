@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News Reporter Hub</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body data-page="home">
+  <header class="container site-header">
+    <div class="site-title">ReporterHQ</div>
+    <nav class="site-nav">
+      <a href="./index.html" class="btn">Home</a>
+      <a href="./gallery.html" class="btn">Gallery</a>
+      <a href="./login.html" class="btn btn--primary">Admin</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Publish stories. Track press. Share moments.</h1>
+        <p>
+          A simple newsroom starter template with login access, admin panel, and editable gallery. Add stories and photos directly from the admin interface.
+        </p>
+        <div style="margin-top: 1.5rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
+          <a class="btn btn--primary" href="./login.html">Go to Admin</a>
+          <a class="btn" href="./gallery.html">Browse Gallery</a>
+        </div>
+      </div>
+      <img class="hero-illustration" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=70" alt="Reporter working" />
+    </section>
+
+    <section>
+      <h2>Latest Stories</h2>
+      <div id="home-news"></div>
+    </section>
+
+    <section class="section">
+      <h2>Photo Gallery</h2>
+      <div id="gallery-preview" class="gallery"></div>
+    </section>
+  </main>
+
+  <footer class="container" style="padding: 2rem 0; text-align: center; color: rgba(163, 179, 198, 0.7);">
+    Built for a news reporter. Login to edit stories and the gallery.
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

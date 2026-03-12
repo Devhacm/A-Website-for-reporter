@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — ReporterHQ</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body data-page="dashboard">
+  <header class="container site-header">
+    <div class="site-title">ReporterHQ</div>
+    <nav class="site-nav">
+      <a href="./index.html" class="btn">Home</a>
+      <a href="./gallery.html" class="btn">Gallery</a>
+      <button id="signout" class="btn btn--danger">Sign out</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="toolbar">
+      <div>
+        <h2>Admin panel</h2>
+        <p class="small">Add, edit, and remove stories and gallery items. Data is saved locally in your browser.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>Manage stories</h3>
+      <div class="form" style="margin-bottom: 2rem;">
+        <form id="article-form">
+          <input type="hidden" name="article-id" value="" />
+          <div class="input-group">
+            <label for="title">Headline</label>
+            <input id="title" name="title" required placeholder="Enter story headline" />
+          </div>
+          <div class="input-group">
+            <label for="url">Source URL (optional)</label>
+            <input id="url" name="url" type="url" placeholder="https://" />
+          </div>
+          <div class="input-group">
+            <label for="summary">Summary</label>
+            <textarea id="summary" name="summary" placeholder="Short summary"></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Save story</button>
+        </form>
+      </div>
+
+      <table class="table" id="articles-table">
+        <thead>
+          <tr>
+            <th>Headline</th>
+            <th>Updated</th>
+            <th>Summary</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h3>Gallery</h3>
+      <div class="form" style="margin-bottom: 2rem;">
+        <form id="gallery-form">
+          <div class="input-group">
+            <label for="photo">Add photo</label>
+            <input id="photo" name="photo" type="file" accept="image/*" required />
+          </div>
+          <div class="input-group">
+            <label for="caption">Caption</label>
+            <input id="caption" name="caption" placeholder="Optional caption" />
+          </div>
+          <button class="btn btn--primary" type="submit">Upload photo</button>
+        </form>
+      </div>
+
+      <table class="table" id="gallery-table">
+        <thead>
+          <tr>
+            <th>Preview</th>
+            <th>Caption</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
